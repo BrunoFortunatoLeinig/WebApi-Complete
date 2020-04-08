@@ -1,0 +1,48 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Página inicial";
+    <style>
+        p{
+            text-align: justify;
+            text-align: center;
+            margin-top: 100px;
+            color: black;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+            p span {
+                text-align: center;
+                background-color: ghostwhite;
+                box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+                padding: 10px;
+            }
+
+        a {
+            color: black;
+        }
+        a:hover{
+            color: crimson;
+            text-decoration: underline;
+        }
+
+        label 1 {
+            text-align: justify;
+        }
+        label 2 {
+            text-align: justify;
+        }
+    </style>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Login</h1>
+    <br />
+    <label id="1">Nome de Usuário: </label>  <input />
+    <br />
+    <br />
+    <label id="2">Senha: </label>  <input type="password" />
+    <br />
+    <button type="button" class="btn-Entrar" id="entrar">ENTRAR</button>
+    <br />
+    <p><span><a href="/Cadastrar">Cadastrar</a>.</span></p>
+</div>

@@ -1,0 +1,72 @@
+﻿@page
+@model Exercicio2e3Model
+@{
+    ViewData["Title"] = "Exercício 2 E 3";
+    <style>
+        p.tag1 {
+            font-size: 20pt;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        label {
+            font-size: 15pt;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+            label.nome2 {
+                font-size: 15pt;
+                margin-top: 25px;
+                text-align: center;
+                color: darkmagenta;
+            }
+
+        button {
+            margin-top: 15px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+
+        p {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 20pt;
+        }
+
+        label.parabens {
+            font-size: 15pt;
+            color: green;
+        }
+        a.tag2{
+            color:black
+        }
+        a:hover{
+            color: tomato;
+        }
+    </style>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+}
+
+<div class="text-center">
+    <form method="post">
+        <h1>Exercício 2 E 3</h1>
+        <br />
+        <p class="tag1">Saida de um Nome com parametro 0 E Soma de 2 números</p>
+        <br />
+        <label>Olá meu Nome é <label class="nome2">THANOS</label></label>
+        <br />
+        <label>Por Gentileza me informe um Número: </label>
+        <input id="N1" name="N1" />
+        <br />
+        <label>Informe outro Número: </label>
+        <input id="N2" name="N2" />
+        <br />
+        <button type="submit" id="btn_ShowResult">Pressione para ver o Resultado</button>
+        <br />
+        <label class="parabens">@Html.LabelForModel(Model.Soma)</label>
+        <p><a class="tag2" href="/exercicio4">Para Avançarmos Clique.</a>.</p>
+    </form>
+</div>

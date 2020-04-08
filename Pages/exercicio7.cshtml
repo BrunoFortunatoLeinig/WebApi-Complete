@@ -1,0 +1,73 @@
+﻿@page
+@model Exercicio7Model
+@{
+    ViewData["Title"] = "Exercício 7";
+    <style>
+        p.tag1 {
+            font-size: 20pt;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        label {
+            font-size: 15pt;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 15px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+
+        p {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 20pt;
+        }
+
+        a.tag2 {
+            color: black
+        }
+
+        a:hover {
+            color: tomato;
+        }
+
+        label.parabens {
+            font-size: 20pt;
+            color: green;
+        }
+        label.parabens2 {
+            font-size: 20pt;
+            color: red;
+        }
+    </style>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+}
+
+<div class="text-center">
+    <form method="post">
+        <h1>Exercício 7</h1>
+        <br />
+        <p class="tag1">Solicita Ano de nascimento e Aparece a Mensagem de acesso negado ou permito</p>
+        <br />
+        <label>Qual seu ano de nascimento?</label>
+        <input id="Acesso" name="Acesso" />
+        <br />
+        <button type="submit" id="btn_ShowResult">Pressione para tentar Acesso</button>
+        <br />
+        @if (!Model.IsRed)
+        {
+            <label class="parabens">@Html.LabelForModel(Model.Acesso)</label>
+        }
+        else
+        {
+            <label class="parabens2">@Html.LabelForModel(Model.Acesso)</label>
+        }
+        <p><a class="tag2" href="/exercicio8">Clique Para Avançarmos.</a>.</p>
+    </form>
+</div>

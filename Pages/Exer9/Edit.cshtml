@@ -1,0 +1,55 @@
+﻿@page
+@model Exercícios.Pages.Exer9.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>IMC</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DadosIMC.ID" />
+            <div class="form-group">
+                <label asp-for="DadosIMC.Nome" class="control-label"></label>
+                <input asp-for="DadosIMC.Nome" class="form-control" />
+                <span asp-validation-for="DadosIMC.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DadosIMC.DataNascimento" class="control-label"></label>
+                <input asp-for="DadosIMC.DataNascimento" class="form-control" />
+                <span asp-validation-for="DadosIMC.DataNascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DadosIMC.Massa" class="control-label"></label>
+                <input asp-for="DadosIMC.Massa" class="form-control" />
+                <span asp-validation-for="DadosIMC.Massa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DadosIMC.Altura" class="control-label"></label>
+                <input asp-for="DadosIMC.Altura" class="form-control" />
+                <span asp-validation-for="DadosIMC.Altura" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DadosIMC.IMC" class="control-label"></label>
+                <input asp-for="DadosIMC.IMC" class="form-control" />
+                <span asp-validation-for="DadosIMC.IMC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Voltar A Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

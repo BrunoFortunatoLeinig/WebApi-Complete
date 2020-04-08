@@ -1,0 +1,62 @@
+﻿@page
+@model Exercícios.Pages.Exer9.IndexModel
+@System.Globalization.CultureInfo.CurrentUICulture
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Cadastro IMC</h1>
+
+<p>
+    <a asp-page="Create">Criar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DadosIMC[0].Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DadosIMC[0].DataNascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DadosIMC[0].Massa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DadosIMC[0].Altura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DadosIMC[0].IMC)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.DadosIMC)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataNascimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Massa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Altura)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IMC)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ID">Editar</a> |
+                    @*<a asp-page="./Details" asp-route-id="@item.ID">Detalhes</a> |*@
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

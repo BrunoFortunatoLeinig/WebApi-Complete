@@ -1,0 +1,74 @@
+﻿@page
+@model Exercicio5Model
+@{
+    ViewData["Title"] = "Exercício 5";
+    <style>
+        p.tag1 {
+            font-size: 20pt;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        label {
+            font-size: 15pt;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 15px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+
+        p {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 20pt;
+        }
+
+        label.parabens {
+            font-size: 15pt;
+            color: green;
+        }
+
+        a.tag2 {
+            color: black
+        }
+
+        a:hover {
+            color: tomato;
+        }
+    </style>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+}
+
+<div class="text-center">
+    <form method="post">
+        <h1>Exercício 5</h1>
+        <br />
+        <p class="tag1">solicita dados do usuario mostra na tela e pede confirmação</p>
+        <br />
+        <p>Preciso de alguns dados por favor</p>
+        <br />
+        <label>Nome completo:</label>
+        <input id="Dados" name="Dados1" />
+        <br />
+        <label>E-mail:</label>
+        <input id="Dados" name="Dados2" />
+        <br />
+        <label>RG:</label>
+        <input id="Dados" name="Dados3" />
+        <br />
+        <label>Telefone:</label>
+        <input id="Dados" name="Dados4" />
+        <br />
+        <button type="submit" id="btn_ShowResult">Pressione para ver o Resultado</button>
+        <br />
+        <label class="parabens">@Html.LabelForModel(Model.Dados)</label>
+        <br />
+        <p><a class="tag2" href="/exercicio6">Clique Para Avançarmos.</a>.</p>
+    </form>
+</div>

@@ -1,0 +1,61 @@
+﻿@page
+@model Exercicio4Model
+@{
+    ViewData["Title"] = "Exercício 4";
+    <style>
+        p.tag1 {
+            font-size: 20pt;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        label {
+            font-size: 15pt;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 15px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+
+        p {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 20pt;
+        }
+
+        a.tag2 {
+            color: black
+        }
+
+        a:hover {
+            color: tomato;
+        }
+        label.parabens {
+            font-size: 15pt;
+            color: green;
+        }
+    </style>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+}
+
+<div class="text-center">
+    <form method="post">
+        <h1>Exercício 4</h1>
+        <br />
+        <p clas="tag1">É Par ou Impar</p>
+        <br />
+        <label>Informe um Número: </label>
+        <input id="N3" name="N3" />
+        <br />
+        <button type="submit" id="btn_ShowResult">Pressione para ver o Resultado</button>
+        <br />
+        <label class="parabens">@Html.LabelForModel(Model.Impar)</label>
+        <p><a class="tag2" href="/exercicio5">Para Avançarmos Clique.</a>.</p>
+    </form>
+</div>

@@ -1,0 +1,63 @@
+﻿@page
+@model Exercicio1Model
+@{
+    ViewData["Title"] = "Exercício 1";
+    <style>
+        p.tag1 {
+            font-size: 20pt;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        label {
+            font-size: 15pt;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 15px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+
+        p {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 20pt;
+        }
+        label.parabens{
+            font-size: 15pt;
+            color: green;
+        }
+        a.tag2 {
+            color: black
+        }
+
+        a:hover {
+            color: tomato;
+        }
+    </style>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+}
+
+<div class="text-center">
+    <form method="post">
+        <h1>Exercicio 1</h1>
+        <br />
+        <p class="tag1">Entrada de um Nome e Saída da Frase "Seja bem vindo" + Nome</p>
+        <br />
+        <label>Qual seu Nome???</label>
+        <br />
+        <input id="Nome" name="Nome" />
+        <br />
+        <button type="submit" id="btn_ShowResult">Pressione para ver o Resultado</button>
+        <br />
+        <label class="parabens">@Html.LabelForModel(Model.Text)</label>
+
+        <p>para continuarmos clique em <a class="tag2" href="/exercicio2e3">Avançar</a>.</p>
+
+    </form>
+</div>

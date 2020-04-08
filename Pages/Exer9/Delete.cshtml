@@ -1,0 +1,52 @@
+﻿@page
+@model Exercícios.Pages.Exer9.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Excluir</h1>
+
+<h3>Tem Certeza que quer excluir este iten??</h3>
+<div>
+    <h4>IMC</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DadosIMC.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DadosIMC.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DadosIMC.DataNascimento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DadosIMC.DataNascimento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DadosIMC.Massa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DadosIMC.Massa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DadosIMC.Altura)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DadosIMC.Altura)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DadosIMC.IMC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DadosIMC.IMC)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="DadosIMC.ID" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-page="./Index">Voltar A Lista</a>
+    </form>
+</div>
