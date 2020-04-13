@@ -3,13 +3,14 @@
 @{
     ViewData["Title"] = "Página inicial";
     <style>
-        p{
+        p {
             text-align: justify;
             text-align: center;
             margin-top: 100px;
             color: black;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
+
             p span {
                 text-align: center;
                 background-color: ghostwhite;
@@ -20,29 +21,36 @@
         a {
             color: black;
         }
-        a:hover{
-            color: crimson;
-            text-decoration: underline;
-        }
+
+            a:hover {
+                color: crimson;
+                text-decoration: underline;
+            }
 
         label 1 {
             text-align: justify;
         }
+
         label 2 {
             text-align: justify;
         }
     </style>
 }
 
-<div class="text-center">
-    <h1 class="display-4">Login</h1>
-    <br />
-    <label id="1">Nome de Usuário: </label>  <input />
-    <br />
-    <br />
-    <label id="2">Senha: </label>  <input type="password" />
-    <br />
-    <button type="button" class="btn-Entrar" id="entrar">ENTRAR</button>
-    <br />
-    <p><span><a href="/Cadastrar">Cadastrar</a>.</span></p>
-</div>
+<h1>Login</h1>
+<br />
+<p>
+    <form method="post">
+        <label>Usuário:</label>
+        <input id="Login" name="Login" class="form-control" />
+        <label>Senha:</label>
+        <input id="Password" name="Password" class="form-control" />
+        <button type="submit" id="btn_Showresult">Entrar</button> / <button type="button" id="acessar"><a href="/Cadastrar">Criar novo Usuário</a></button>
+        <br />
+        <label>@Html.LabelForModel(Model.Login)</label>
+        @* Validar se o usuario existe e se a senha é compativel *@
+        @* Create new user - Direcionar para a tela de cadastro de usuario *@
+    </form>
+</p>
+
+

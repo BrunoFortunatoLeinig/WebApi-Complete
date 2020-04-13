@@ -28,20 +28,23 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Cadastro de Usuário</h1>
-    <br />
-    <label>Nome Completo: </label>  <input />
-    <br />
-    <br />
-    <label>Data de nascimento: </label>  <input type="date" />
-    <br />
-    <br />
-    <label>Nome de Usuário: </label>  <input />
-    <br />
-    <br />
-    <label>Senha: </label>  <input type="password" />
-    <br />
-    <br />
-    <button type="button" class="btn-Entrar" id="entrar" onclick="">Criar Cadastro</button>
-    <br />
+    <form method="post">
+        <h1 class="display-4">Cadastro de Usuário</h1>
+        <br />
+        <label>Nome Completo: </label>  <input />
+        <br />
+        <br />
+        <label>Data de nascimento: </label>  <input type="date" />
+        <br />
+        <br />
+        <label>Nome de Usuário: </label>  <input id="Create" name="Usuario" />
+        <br />
+        <br />
+        <label>Senha: </label>  <input id="Create" name="Senha" type="password" />
+        <br />
+        <br />
+        <button type="button" class="btn-Entrar" id="entrar">Criar Cadastro</button>
+        <br />
+        <label>@Html.LabelForModel(Model.Create)</label>
+    </form>
 </div>

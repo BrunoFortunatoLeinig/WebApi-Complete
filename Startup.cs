@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Exercícios.Data;
+using Exercícios.Dto;
 
 
 namespace Exercícios
@@ -25,6 +26,8 @@ namespace Exercícios
 
             services.AddDbContext<ExercíciosContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ExercíciosContext")));
+
+            User.LoadUser();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
