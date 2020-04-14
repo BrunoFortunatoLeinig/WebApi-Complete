@@ -29,14 +29,15 @@ namespace Exercícios.Pages
         {
             var usuario = Request.Form["Usuario"];
             var senha = Request.Form["Senha"];
-            this.Create = Exercícios.Dto.User.PostUser(new Dto.UserModel());
+            this.Create = Convert.ToString(Exercícios.Dto.User.PostUser(new Dto.UserModel()));
             Exercícios.Dto.User.PostUser(new Dto.UserModel()
             {
                 Active = true,
                 Name = usuario,
                 Password = senha
             });
-            
+
+            Response.Redirect("/index");
         }
     }
 }
